@@ -8,9 +8,11 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/Users/naveeng/Documents/fc/Space-Invaders/src/block.cpp" "CMakeFiles/space_invaders.dir/src/block.cpp.o" "gcc" "CMakeFiles/space_invaders.dir/src/block.cpp.o.d"
   "/Users/naveeng/Documents/fc/Space-Invaders/src/game.cpp" "CMakeFiles/space_invaders.dir/src/game.cpp.o" "gcc" "CMakeFiles/space_invaders.dir/src/game.cpp.o.d"
   "/Users/naveeng/Documents/fc/Space-Invaders/src/laser.cpp" "CMakeFiles/space_invaders.dir/src/laser.cpp.o" "gcc" "CMakeFiles/space_invaders.dir/src/laser.cpp.o.d"
   "/Users/naveeng/Documents/fc/Space-Invaders/src/main.cpp" "CMakeFiles/space_invaders.dir/src/main.cpp.o" "gcc" "CMakeFiles/space_invaders.dir/src/main.cpp.o.d"
+  "/Users/naveeng/Documents/fc/Space-Invaders/src/obstacle.cpp" "CMakeFiles/space_invaders.dir/src/obstacle.cpp.o" "gcc" "CMakeFiles/space_invaders.dir/src/obstacle.cpp.o.d"
   "/Users/naveeng/Documents/fc/Space-Invaders/src/spaceship.cpp" "CMakeFiles/space_invaders.dir/src/spaceship.cpp.o" "gcc" "CMakeFiles/space_invaders.dir/src/spaceship.cpp.o.d"
   )
 

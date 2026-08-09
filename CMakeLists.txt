@@ -6,12 +6,9 @@ set (CMAKE_CXX_STANDARD 17)
 set (CMAKE_CXX_STANDARD_REQUIRED ON)
 
 find_package(raylib REQUIRED)
+file(GLOB SOURCES "src/*.cpp")
 
-add_executable (space_invaders 
-                src/main.cpp
-                src/spaceship.cpp
-                src/game.cpp
-                src/laser.cpp)
+add_executable (space_invaders ${SOURCES})
 
 target_include_directories(space_invaders PRIVATE include)
 

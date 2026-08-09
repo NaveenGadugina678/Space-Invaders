@@ -72,38 +72,24 @@ include CMakeFiles/space_invaders.dir/flags.make
 CMakeFiles/space_invaders.dir/codegen:
 .PHONY : CMakeFiles/space_invaders.dir/codegen
 
-CMakeFiles/space_invaders.dir/src/main.cpp.o: CMakeFiles/space_invaders.dir/flags.make
-CMakeFiles/space_invaders.dir/src/main.cpp.o: /Users/naveeng/Documents/fc/Space-Invaders/src/main.cpp
-CMakeFiles/space_invaders.dir/src/main.cpp.o: CMakeFiles/space_invaders.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/naveeng/Documents/fc/Space-Invaders/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/space_invaders.dir/src/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/space_invaders.dir/src/main.cpp.o -MF CMakeFiles/space_invaders.dir/src/main.cpp.o.d -o CMakeFiles/space_invaders.dir/src/main.cpp.o -c /Users/naveeng/Documents/fc/Space-Invaders/src/main.cpp
+CMakeFiles/space_invaders.dir/src/block.cpp.o: CMakeFiles/space_invaders.dir/flags.make
+CMakeFiles/space_invaders.dir/src/block.cpp.o: /Users/naveeng/Documents/fc/Space-Invaders/src/block.cpp
+CMakeFiles/space_invaders.dir/src/block.cpp.o: CMakeFiles/space_invaders.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/naveeng/Documents/fc/Space-Invaders/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/space_invaders.dir/src/block.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/space_invaders.dir/src/block.cpp.o -MF CMakeFiles/space_invaders.dir/src/block.cpp.o.d -o CMakeFiles/space_invaders.dir/src/block.cpp.o -c /Users/naveeng/Documents/fc/Space-Invaders/src/block.cpp
 
-CMakeFiles/space_invaders.dir/src/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/space_invaders.dir/src/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/naveeng/Documents/fc/Space-Invaders/src/main.cpp > CMakeFiles/space_invaders.dir/src/main.cpp.i
+CMakeFiles/space_invaders.dir/src/block.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/space_invaders.dir/src/block.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/naveeng/Documents/fc/Space-Invaders/src/block.cpp > CMakeFiles/space_invaders.dir/src/block.cpp.i
 
-CMakeFiles/space_invaders.dir/src/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/space_invaders.dir/src/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/naveeng/Documents/fc/Space-Invaders/src/main.cpp -o CMakeFiles/space_invaders.dir/src/main.cpp.s
-
-CMakeFiles/space_invaders.dir/src/spaceship.cpp.o: CMakeFiles/space_invaders.dir/flags.make
-CMakeFiles/space_invaders.dir/src/spaceship.cpp.o: /Users/naveeng/Documents/fc/Space-Invaders/src/spaceship.cpp
-CMakeFiles/space_invaders.dir/src/spaceship.cpp.o: CMakeFiles/space_invaders.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/naveeng/Documents/fc/Space-Invaders/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/space_invaders.dir/src/spaceship.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/space_invaders.dir/src/spaceship.cpp.o -MF CMakeFiles/space_invaders.dir/src/spaceship.cpp.o.d -o CMakeFiles/space_invaders.dir/src/spaceship.cpp.o -c /Users/naveeng/Documents/fc/Space-Invaders/src/spaceship.cpp
-
-CMakeFiles/space_invaders.dir/src/spaceship.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/space_invaders.dir/src/spaceship.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/naveeng/Documents/fc/Space-Invaders/src/spaceship.cpp > CMakeFiles/space_invaders.dir/src/spaceship.cpp.i
-
-CMakeFiles/space_invaders.dir/src/spaceship.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/space_invaders.dir/src/spaceship.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/naveeng/Documents/fc/Space-Invaders/src/spaceship.cpp -o CMakeFiles/space_invaders.dir/src/spaceship.cpp.s
+CMakeFiles/space_invaders.dir/src/block.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/space_invaders.dir/src/block.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/naveeng/Documents/fc/Space-Invaders/src/block.cpp -o CMakeFiles/space_invaders.dir/src/block.cpp.s
 
 CMakeFiles/space_invaders.dir/src/game.cpp.o: CMakeFiles/space_invaders.dir/flags.make
 CMakeFiles/space_invaders.dir/src/game.cpp.o: /Users/naveeng/Documents/fc/Space-Invaders/src/game.cpp
 CMakeFiles/space_invaders.dir/src/game.cpp.o: CMakeFiles/space_invaders.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/naveeng/Documents/fc/Space-Invaders/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/space_invaders.dir/src/game.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/naveeng/Documents/fc/Space-Invaders/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/space_invaders.dir/src/game.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/space_invaders.dir/src/game.cpp.o -MF CMakeFiles/space_invaders.dir/src/game.cpp.o.d -o CMakeFiles/space_invaders.dir/src/game.cpp.o -c /Users/naveeng/Documents/fc/Space-Invaders/src/game.cpp
 
 CMakeFiles/space_invaders.dir/src/game.cpp.i: cmake_force
@@ -117,7 +103,7 @@ CMakeFiles/space_invaders.dir/src/game.cpp.s: cmake_force
 CMakeFiles/space_invaders.dir/src/laser.cpp.o: CMakeFiles/space_invaders.dir/flags.make
 CMakeFiles/space_invaders.dir/src/laser.cpp.o: /Users/naveeng/Documents/fc/Space-Invaders/src/laser.cpp
 CMakeFiles/space_invaders.dir/src/laser.cpp.o: CMakeFiles/space_invaders.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/naveeng/Documents/fc/Space-Invaders/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/space_invaders.dir/src/laser.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/naveeng/Documents/fc/Space-Invaders/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/space_invaders.dir/src/laser.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/space_invaders.dir/src/laser.cpp.o -MF CMakeFiles/space_invaders.dir/src/laser.cpp.o.d -o CMakeFiles/space_invaders.dir/src/laser.cpp.o -c /Users/naveeng/Documents/fc/Space-Invaders/src/laser.cpp
 
 CMakeFiles/space_invaders.dir/src/laser.cpp.i: cmake_force
@@ -128,24 +114,70 @@ CMakeFiles/space_invaders.dir/src/laser.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/space_invaders.dir/src/laser.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/naveeng/Documents/fc/Space-Invaders/src/laser.cpp -o CMakeFiles/space_invaders.dir/src/laser.cpp.s
 
+CMakeFiles/space_invaders.dir/src/main.cpp.o: CMakeFiles/space_invaders.dir/flags.make
+CMakeFiles/space_invaders.dir/src/main.cpp.o: /Users/naveeng/Documents/fc/Space-Invaders/src/main.cpp
+CMakeFiles/space_invaders.dir/src/main.cpp.o: CMakeFiles/space_invaders.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/naveeng/Documents/fc/Space-Invaders/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/space_invaders.dir/src/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/space_invaders.dir/src/main.cpp.o -MF CMakeFiles/space_invaders.dir/src/main.cpp.o.d -o CMakeFiles/space_invaders.dir/src/main.cpp.o -c /Users/naveeng/Documents/fc/Space-Invaders/src/main.cpp
+
+CMakeFiles/space_invaders.dir/src/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/space_invaders.dir/src/main.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/naveeng/Documents/fc/Space-Invaders/src/main.cpp > CMakeFiles/space_invaders.dir/src/main.cpp.i
+
+CMakeFiles/space_invaders.dir/src/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/space_invaders.dir/src/main.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/naveeng/Documents/fc/Space-Invaders/src/main.cpp -o CMakeFiles/space_invaders.dir/src/main.cpp.s
+
+CMakeFiles/space_invaders.dir/src/obstacle.cpp.o: CMakeFiles/space_invaders.dir/flags.make
+CMakeFiles/space_invaders.dir/src/obstacle.cpp.o: /Users/naveeng/Documents/fc/Space-Invaders/src/obstacle.cpp
+CMakeFiles/space_invaders.dir/src/obstacle.cpp.o: CMakeFiles/space_invaders.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/naveeng/Documents/fc/Space-Invaders/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/space_invaders.dir/src/obstacle.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/space_invaders.dir/src/obstacle.cpp.o -MF CMakeFiles/space_invaders.dir/src/obstacle.cpp.o.d -o CMakeFiles/space_invaders.dir/src/obstacle.cpp.o -c /Users/naveeng/Documents/fc/Space-Invaders/src/obstacle.cpp
+
+CMakeFiles/space_invaders.dir/src/obstacle.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/space_invaders.dir/src/obstacle.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/naveeng/Documents/fc/Space-Invaders/src/obstacle.cpp > CMakeFiles/space_invaders.dir/src/obstacle.cpp.i
+
+CMakeFiles/space_invaders.dir/src/obstacle.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/space_invaders.dir/src/obstacle.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/naveeng/Documents/fc/Space-Invaders/src/obstacle.cpp -o CMakeFiles/space_invaders.dir/src/obstacle.cpp.s
+
+CMakeFiles/space_invaders.dir/src/spaceship.cpp.o: CMakeFiles/space_invaders.dir/flags.make
+CMakeFiles/space_invaders.dir/src/spaceship.cpp.o: /Users/naveeng/Documents/fc/Space-Invaders/src/spaceship.cpp
+CMakeFiles/space_invaders.dir/src/spaceship.cpp.o: CMakeFiles/space_invaders.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/naveeng/Documents/fc/Space-Invaders/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/space_invaders.dir/src/spaceship.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/space_invaders.dir/src/spaceship.cpp.o -MF CMakeFiles/space_invaders.dir/src/spaceship.cpp.o.d -o CMakeFiles/space_invaders.dir/src/spaceship.cpp.o -c /Users/naveeng/Documents/fc/Space-Invaders/src/spaceship.cpp
+
+CMakeFiles/space_invaders.dir/src/spaceship.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/space_invaders.dir/src/spaceship.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/naveeng/Documents/fc/Space-Invaders/src/spaceship.cpp > CMakeFiles/space_invaders.dir/src/spaceship.cpp.i
+
+CMakeFiles/space_invaders.dir/src/spaceship.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/space_invaders.dir/src/spaceship.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/naveeng/Documents/fc/Space-Invaders/src/spaceship.cpp -o CMakeFiles/space_invaders.dir/src/spaceship.cpp.s
+
 # Object files for target space_invaders
 space_invaders_OBJECTS = \
-"CMakeFiles/space_invaders.dir/src/main.cpp.o" \
-"CMakeFiles/space_invaders.dir/src/spaceship.cpp.o" \
+"CMakeFiles/space_invaders.dir/src/block.cpp.o" \
 "CMakeFiles/space_invaders.dir/src/game.cpp.o" \
-"CMakeFiles/space_invaders.dir/src/laser.cpp.o"
+"CMakeFiles/space_invaders.dir/src/laser.cpp.o" \
+"CMakeFiles/space_invaders.dir/src/main.cpp.o" \
+"CMakeFiles/space_invaders.dir/src/obstacle.cpp.o" \
+"CMakeFiles/space_invaders.dir/src/spaceship.cpp.o"
 
 # External object files for target space_invaders
 space_invaders_EXTERNAL_OBJECTS =
 
-space_invaders: CMakeFiles/space_invaders.dir/src/main.cpp.o
-space_invaders: CMakeFiles/space_invaders.dir/src/spaceship.cpp.o
+space_invaders: CMakeFiles/space_invaders.dir/src/block.cpp.o
 space_invaders: CMakeFiles/space_invaders.dir/src/game.cpp.o
 space_invaders: CMakeFiles/space_invaders.dir/src/laser.cpp.o
+space_invaders: CMakeFiles/space_invaders.dir/src/main.cpp.o
+space_invaders: CMakeFiles/space_invaders.dir/src/obstacle.cpp.o
+space_invaders: CMakeFiles/space_invaders.dir/src/spaceship.cpp.o
 space_invaders: CMakeFiles/space_invaders.dir/build.make
 space_invaders: /opt/homebrew/Cellar/raylib/5.5/lib/libraylib.dylib
 space_invaders: CMakeFiles/space_invaders.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/naveeng/Documents/fc/Space-Invaders/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable space_invaders"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/naveeng/Documents/fc/Space-Invaders/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable space_invaders"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/space_invaders.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

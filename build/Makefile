@@ -129,6 +129,30 @@ space_invaders/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/space_invaders.dir/build.make CMakeFiles/space_invaders.dir/build
 .PHONY : space_invaders/fast
 
+src/block.o: src/block.cpp.o
+.PHONY : src/block.o
+
+# target to build an object file
+src/block.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/space_invaders.dir/build.make CMakeFiles/space_invaders.dir/src/block.cpp.o
+.PHONY : src/block.cpp.o
+
+src/block.i: src/block.cpp.i
+.PHONY : src/block.i
+
+# target to preprocess a source file
+src/block.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/space_invaders.dir/build.make CMakeFiles/space_invaders.dir/src/block.cpp.i
+.PHONY : src/block.cpp.i
+
+src/block.s: src/block.cpp.s
+.PHONY : src/block.s
+
+# target to generate assembly for a file
+src/block.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/space_invaders.dir/build.make CMakeFiles/space_invaders.dir/src/block.cpp.s
+.PHONY : src/block.cpp.s
+
 src/game.o: src/game.cpp.o
 .PHONY : src/game.o
 
@@ -201,6 +225,30 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/space_invaders.dir/build.make CMakeFiles/space_invaders.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/obstacle.o: src/obstacle.cpp.o
+.PHONY : src/obstacle.o
+
+# target to build an object file
+src/obstacle.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/space_invaders.dir/build.make CMakeFiles/space_invaders.dir/src/obstacle.cpp.o
+.PHONY : src/obstacle.cpp.o
+
+src/obstacle.i: src/obstacle.cpp.i
+.PHONY : src/obstacle.i
+
+# target to preprocess a source file
+src/obstacle.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/space_invaders.dir/build.make CMakeFiles/space_invaders.dir/src/obstacle.cpp.i
+.PHONY : src/obstacle.cpp.i
+
+src/obstacle.s: src/obstacle.cpp.s
+.PHONY : src/obstacle.s
+
+# target to generate assembly for a file
+src/obstacle.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/space_invaders.dir/build.make CMakeFiles/space_invaders.dir/src/obstacle.cpp.s
+.PHONY : src/obstacle.cpp.s
+
 src/spaceship.o: src/spaceship.cpp.o
 .PHONY : src/spaceship.o
 
@@ -234,6 +282,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... space_invaders"
+	@echo "... src/block.o"
+	@echo "... src/block.i"
+	@echo "... src/block.s"
 	@echo "... src/game.o"
 	@echo "... src/game.i"
 	@echo "... src/game.s"
@@ -243,6 +294,9 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/obstacle.o"
+	@echo "... src/obstacle.i"
+	@echo "... src/obstacle.s"
 	@echo "... src/spaceship.o"
 	@echo "... src/spaceship.i"
 	@echo "... src/spaceship.s"
