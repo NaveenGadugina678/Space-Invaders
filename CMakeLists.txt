@@ -10,7 +10,8 @@ find_package(raylib REQUIRED)
 add_executable (space_invaders 
                 src/main.cpp
                 src/spaceship.cpp
-                src/game.cpp)
+                src/game.cpp
+                src/laser.cpp)
 
 target_include_directories(space_invaders PRIVATE include)
 
