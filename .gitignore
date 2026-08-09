@@ -1,1 +1,12 @@
+# executables.
 *.out
+*.exe
+
+# build directory
+build/
+
+# object files.
+*.o
+
+# macOS
+.DS_Store
