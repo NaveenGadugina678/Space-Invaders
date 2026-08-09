@@ -1,0 +1,3 @@
+/Users/naveeng/Documents/fc/Space-Invaders/build/CMakeFiles/space_invaders.dir
+/Users/naveeng/Documents/fc/Space-Invaders/build/CMakeFiles/edit_cache.dir
+/Users/naveeng/Documents/fc/Space-Invaders/build/CMakeFiles/rebuild_cache.dir

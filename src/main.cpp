@@ -1,4 +1,5 @@
-#include <raylib.h>
+#include "raylib.h"
+#include "game.h"
 
 int main() {
     Color grey = {29, 29, 27, 255};
@@ -7,10 +8,16 @@ int main() {
 
     InitWindow(windowWidth, windowHeight, "Space-Invaders");
     SetTargetFPS(60);
+    
+    Game game;
 
     while(WindowShouldClose() == false) {
+        game.HandleInput();
+
         BeginDrawing();
         ClearBackground(grey);
+        game.Draw();
+
         EndDrawing();
     }
 
