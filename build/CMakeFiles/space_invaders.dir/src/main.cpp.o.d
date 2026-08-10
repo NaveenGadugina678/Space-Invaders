@@ -778,4 +778,5 @@ CMakeFiles/space_invaders.dir/src/main.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/cstdarg \
   /Users/naveeng/Documents/fc/Space-Invaders/include/obstacle.h \
   /Users/naveeng/Documents/fc/Space-Invaders/include/block.h \
-  /Users/naveeng/Documents/fc/Space-Invaders/include/alien.h
+  /Users/naveeng/Documents/fc/Space-Invaders/include/alien.h \
+  /Users/naveeng/Documents/fc/Space-Invaders/include/mysteryship.h

@@ -249,6 +249,30 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/space_invaders.dir/build.make CMakeFiles/space_invaders.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/mysteryship.o: src/mysteryship.cpp.o
+.PHONY : src/mysteryship.o
+
+# target to build an object file
+src/mysteryship.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/space_invaders.dir/build.make CMakeFiles/space_invaders.dir/src/mysteryship.cpp.o
+.PHONY : src/mysteryship.cpp.o
+
+src/mysteryship.i: src/mysteryship.cpp.i
+.PHONY : src/mysteryship.i
+
+# target to preprocess a source file
+src/mysteryship.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/space_invaders.dir/build.make CMakeFiles/space_invaders.dir/src/mysteryship.cpp.i
+.PHONY : src/mysteryship.cpp.i
+
+src/mysteryship.s: src/mysteryship.cpp.s
+.PHONY : src/mysteryship.s
+
+# target to generate assembly for a file
+src/mysteryship.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/space_invaders.dir/build.make CMakeFiles/space_invaders.dir/src/mysteryship.cpp.s
+.PHONY : src/mysteryship.cpp.s
+
 src/obstacle.o: src/obstacle.cpp.o
 .PHONY : src/obstacle.o
 
@@ -321,6 +345,9 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/mysteryship.o"
+	@echo "... src/mysteryship.i"
+	@echo "... src/mysteryship.s"
 	@echo "... src/obstacle.o"
 	@echo "... src/obstacle.i"
 	@echo "... src/obstacle.s"

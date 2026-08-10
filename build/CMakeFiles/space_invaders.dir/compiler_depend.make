@@ -800,6 +800,7 @@ CMakeFiles/space_invaders.dir/src/game.cpp.o: /Users/naveeng/Documents/fc/Space-
   /Users/naveeng/Documents/fc/Space-Invaders/include/block.h \
   /Users/naveeng/Documents/fc/Space-Invaders/include/game.h \
   /Users/naveeng/Documents/fc/Space-Invaders/include/laser.h \
+  /Users/naveeng/Documents/fc/Space-Invaders/include/mysteryship.h \
   /Users/naveeng/Documents/fc/Space-Invaders/include/obstacle.h \
   /Users/naveeng/Documents/fc/Space-Invaders/include/spaceship.h \
   /opt/homebrew/Cellar/raylib/5.5/include/raylib.h
@@ -1592,6 +1593,7 @@ CMakeFiles/space_invaders.dir/src/main.cpp.o: /Users/naveeng/Documents/fc/Space-
   /Users/naveeng/Documents/fc/Space-Invaders/include/block.h \
   /Users/naveeng/Documents/fc/Space-Invaders/include/game.h \
   /Users/naveeng/Documents/fc/Space-Invaders/include/laser.h \
+  /Users/naveeng/Documents/fc/Space-Invaders/include/mysteryship.h \
   /Users/naveeng/Documents/fc/Space-Invaders/include/obstacle.h \
   /Users/naveeng/Documents/fc/Space-Invaders/include/spaceship.h \
   /opt/homebrew/Cellar/raylib/5.5/include/raylib.h
@@ -3150,6 +3152,8 @@ CMakeFiles/space_invaders.dir/src/spaceship.cpp.o: /Users/naveeng/Documents/fc/S
   /Users/naveeng/Documents/fc/Space-Invaders/include/spaceship.h \
   /opt/homebrew/Cellar/raylib/5.5/include/raylib.h
 
+
+/Users/naveeng/Documents/fc/Space-Invaders/include/mysteryship.h:
 
 /Users/naveeng/Documents/fc/Space-Invaders/include/game.h:
 

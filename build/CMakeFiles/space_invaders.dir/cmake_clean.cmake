@@ -9,6 +9,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/space_invaders.dir/src/laser.cpp.o.d"
   "CMakeFiles/space_invaders.dir/src/main.cpp.o"
   "CMakeFiles/space_invaders.dir/src/main.cpp.o.d"
+  "CMakeFiles/space_invaders.dir/src/mysteryship.cpp.o"
+  "CMakeFiles/space_invaders.dir/src/mysteryship.cpp.o.d"
   "CMakeFiles/space_invaders.dir/src/obstacle.cpp.o"
   "CMakeFiles/space_invaders.dir/src/obstacle.cpp.o.d"
   "CMakeFiles/space_invaders.dir/src/spaceship.cpp.o"
