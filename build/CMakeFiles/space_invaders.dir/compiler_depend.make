@@ -1598,6 +1598,17 @@ CMakeFiles/space_invaders.dir/src/main.cpp.o: /Users/naveeng/Documents/fc/Space-
   /Users/naveeng/Documents/fc/Space-Invaders/include/spaceship.h \
   /opt/homebrew/Cellar/raylib/5.5/include/raylib.h
 
+CMakeFiles/space_invaders.dir/src/mysteryship.cpp.o: /Users/naveeng/Documents/fc/Space-Invaders/src/mysteryship.cpp \
+  /Library/Developer/CommandLineTools/usr/lib/clang/21/include/__stdarg___gnuc_va_list.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/21/include/__stdarg___va_copy.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/21/include/__stdarg_header_macro.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/21/include/__stdarg_va_arg.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/21/include/__stdarg_va_copy.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/21/include/__stdarg_va_list.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/21/include/stdarg.h \
+  /Users/naveeng/Documents/fc/Space-Invaders/include/mysteryship.h \
+  /opt/homebrew/Cellar/raylib/5.5/include/raylib.h
+
 CMakeFiles/space_invaders.dir/src/obstacle.cpp.o: /Users/naveeng/Documents/fc/Space-Invaders/src/obstacle.cpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/Availability.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityInternal.h \
@@ -3152,6 +3163,8 @@ CMakeFiles/space_invaders.dir/src/spaceship.cpp.o: /Users/naveeng/Documents/fc/S
   /Users/naveeng/Documents/fc/Space-Invaders/include/spaceship.h \
   /opt/homebrew/Cellar/raylib/5.5/include/raylib.h
 
+
+/Users/naveeng/Documents/fc/Space-Invaders/src/mysteryship.cpp:
 
 /Users/naveeng/Documents/fc/Space-Invaders/include/mysteryship.h:
 

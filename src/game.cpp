@@ -35,7 +35,10 @@ void Game::Update() {
     }
 
     DeleteInactiveLasers();
+
     mysteryship.Update();
+
+    checkForCollisions();
 }
 
 void Game::Draw() {
@@ -147,8 +150,79 @@ void Game::AlienShootLaser() {
     if (currentTime - timeLastAlienFired >= alienLaserShootInterval && !aliens.empty()) {
         int randomIndex = GetRandomValue(0, aliens.size() - 1);
         Alien& alien = aliens[randomIndex];
-        alienLasers.push_back(Laser({(alien.position.x + alien.alienImages[alien.type - 1]. width * 0.06f) / 2, alien.position.y + alien.alienImages[alien.type - 1].height * 0.06f}, 6));
+        alienLasers.push_back(Laser({alien.position.x + (alien.alienImages[alien.type - 1].width * 0.06f) / 2, alien.position.y + (alien.alienImages[alien.type - 1].height * 0.06f)}, 6));
         timeLastAlienFired = GetTime();
+    }
+}
+
+void Game::checkForCollisions() {
+    // spaceship lasers.
+    
+    for (auto& laser : spaceship.lasers) {
+        auto it = aliens.begin();
+        while (it != aliens.end()) {
+            if (CheckCollisionRecs(it -> getRect(), laser.getRect())) {
+                it = aliens.erase(it);
+                laser.active = false;
+            }else {
+                ++it;
+            }
+        }
+
+        for (auto& obstacle : obstacles) {
+            auto it = obstacle.blocks.begin();
+            while (it != obstacle.blocks.end()) {
+                if (CheckCollisionRecs(it -> getRect(), laser.getRect())) {
+                    it = obstacle.blocks.erase(it);
+                    laser.active = false;
+                }else {
+                    ++it;
+                }
+            }
+        }
+        
+        if (CheckCollisionRecs(mysteryship.getRect(), laser.getRect())) {
+            mysteryship.alive = false;
+            laser.active = false;
+        }
+    }
+
+    // Alien lasers.
+
+    for (auto& laser : alienLasers) {
+        if (CheckCollisionRecs(laser.getRect(), spaceship.getRect())) {
+            laser.active = false;
+        }
+        
+        for (auto& obstacle : obstacles) {
+            auto it = obstacle.blocks.begin();
+            while (it != obstacle.blocks.end()) {
+                if (CheckCollisionRecs(it -> getRect(), laser.getRect())) {
+                    it = obstacle.blocks.erase(it);
+                    laser.active = false;
+                }else {
+                    ++it;
+                }
+            }
+        }
+    }
+
+    // alien collision with obstacle
+
+    for (auto& alien : aliens) {
+        for (auto & obstacle : obstacles) {
+            auto it = obstacle.blocks.begin();
+            while (it != obstacle.blocks.end()) {
+                if (CheckCollisionRecs(it -> getRect(), alien.getRect())) {
+                    it = obstacle.blocks.erase(it);
+                }else {
+                    it++;
+                }
+            }
+        }
+
+        if (CheckCollisionRecs(alien.getRect(), spaceship.getRect())) {
+        }
     }
 }
 
