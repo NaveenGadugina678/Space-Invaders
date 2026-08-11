@@ -18,6 +18,8 @@ int main() {
     int windowHeight = 700;
 
     InitWindow(windowWidth + offset, windowHeight + 2 * offset, "Space-Invaders");
+    InitAudioDevice();
+
     SetTargetFPS(60);
     
     Font font = LoadFontEx("font/dogica.ttf", 64, 0, 0);
@@ -27,6 +29,7 @@ int main() {
     Game game;
 
     while(WindowShouldClose() == false) {
+        UpdateMusicStream(game.music);
         game.HandleInput();
         game.Update();
         BeginDrawing();
@@ -47,7 +50,7 @@ int main() {
 
         DrawTextEx(font, "SCORE", {50, 15}, 34, 2.0f, yellow);
         std::string scoreText = FormatWithLeadingZeros(game.score, 5);
-        DrawTextEx(font, scoreText.c_str(), {58, 40}, 34, 2.0f, yellow);
+        DrawTextEx(font, scoreText.c_str(), {58, 50}, 34, 2.0f, yellow);
         
         DrawTextEx(font, "HIGH-SCORE", {520, 15}, 34, 2.0f, yellow);
         std::string highscoreText = FormatWithLeadingZeros(game.highscore, 5);
@@ -58,4 +61,5 @@ int main() {
     }
 
     CloseWindow();
+    CloseAudioDevice();
 }

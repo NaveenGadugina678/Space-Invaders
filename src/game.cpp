@@ -3,11 +3,16 @@
 #include <iostream>
 
 Game::Game() {
+    music = LoadMusicStream("sound/music.ogg");
+    explosionSound = LoadSound("sound/explosion.ogg");
+    PlayMusicStream(music);
     InitGame();
 }
 
 Game::~Game() {
     Alien::UnloadImages();
+    UnloadMusicStream(music);
+    UnloadSound(explosionSound);
 }
 
 void Game::Update() {
@@ -38,8 +43,12 @@ void Game::Update() {
         checkForCollisions();
     }else {
         if (IsKeyDown(KEY_ENTER)) {
-           Reset();
-           InitGame();
+            if (lives == 0) {
+                Reset();
+                InitGame();
+            }
+
+            run = true;
         }
     }
 }
@@ -68,11 +77,11 @@ void Game::Draw() {
 
 void Game::HandleInput() {
     if (run) {
-        if (IsKeyDown(KEY_H)) {
+        if (IsKeyDown(KEY_H) || IsKeyDown(KEY_LEFT)) {
             spaceship.MoveLeft();
-        }else if (IsKeyDown(KEY_L)) {
+        }else if (IsKeyDown(KEY_L) || IsKeyDown(KEY_RIGHT)) {
             spaceship.MoveRight();
-        }else if (IsKeyDown(KEY_SPACE)) {
+        }else if (IsKeyDown(KEY_SPACE) || IsKeyDown(KEY_K)) {
             spaceship.FireLaser();
         }
     }
@@ -169,6 +178,8 @@ void Game::checkForCollisions() {
         while (it != aliens.end()) {
             if (CheckCollisionRecs(it -> getRect(), laser.getRect())) {
 
+                PlaySound(explosionSound);
+
                 if (it -> type == 1) {
                     score += 100;
                 } else if (it -> type == 2) {
@@ -203,6 +214,7 @@ void Game::checkForCollisions() {
             mysteryship.alive = false;
             laser.active = false;
             checkForHighscore();
+            PlaySound(explosionSound);
         }
     }
 
@@ -255,7 +267,7 @@ void Game::GameOver() {
 }
 
 void Game::InitGame() {
-    run = true;
+    run = false;
     obstacles = CreateObstacles();
     aliens = CreateAliens();
     aliensDirection = 1;
