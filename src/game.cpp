@@ -1,12 +1,7 @@
 #include "game.h"
 
 Game::Game() {
-    obstacles = CreateObstacles();
-    aliens = CreateAliens();
-    aliensDirection = 1;
-    timeLastAlienFired = 0.0;
-    timeLastSpawn = 0.0;
-    mysteryShipSpawnInterval = GetRandomValue(10, 20);
+    InitGame();
 }
 
 Game::~Game() {
@@ -14,31 +9,37 @@ Game::~Game() {
 }
 
 void Game::Update() {
+    if (run) {
+        double currentTime = GetTime();
+        if (currentTime - timeLastSpawn > mysteryShipSpawnInterval) {
+            mysteryship.Spawn();
+            timeLastSpawn = GetTime();
+            mysteryShipSpawnInterval = GetRandomValue(10, 20);
+        }
 
-    double currentTime = GetTime();
-    if (currentTime - timeLastSpawn > mysteryShipSpawnInterval) {
-        mysteryship.Spawn();
-        timeLastSpawn = GetTime();
-        mysteryShipSpawnInterval = GetRandomValue(10, 20);
+        for (auto& laser : spaceship.lasers) {
+            laser.Update();
+        }
+        
+        MoveAliens();
+        
+        AlienShootLaser();
+
+        for (auto& laser : alienLasers) {
+            laser.Update();
+        }
+
+        DeleteInactiveLasers();
+
+        mysteryship.Update();
+
+        checkForCollisions();
+    }else {
+        if (IsKeyDown(KEY_ENTER)) {
+           Reset();
+           InitGame();
+        }
     }
-
-    for (auto& laser : spaceship.lasers) {
-        laser.Update();
-    }
-    
-    MoveAliens();
-    
-    AlienShootLaser();
-
-    for (auto& laser : alienLasers) {
-        laser.Update();
-    }
-
-    DeleteInactiveLasers();
-
-    mysteryship.Update();
-
-    checkForCollisions();
 }
 
 void Game::Draw() {
@@ -64,12 +65,14 @@ void Game::Draw() {
 }
 
 void Game::HandleInput() {
-    if (IsKeyDown(KEY_H)) {
-        spaceship.MoveLeft();
-    }else if (IsKeyDown(KEY_L)) {
-        spaceship.MoveRight();
-    }else if (IsKeyDown(KEY_SPACE)) {
-        spaceship.FireLaser();
+    if (run) {
+        if (IsKeyDown(KEY_H)) {
+            spaceship.MoveLeft();
+        }else if (IsKeyDown(KEY_L)) {
+            spaceship.MoveRight();
+        }else if (IsKeyDown(KEY_SPACE)) {
+            spaceship.FireLaser();
+        }
     }
 }
 
@@ -96,7 +99,7 @@ std::vector<Obstacle> Game::CreateObstacles() {
     float gap = (GetScreenWidth() - (4 * obstacleWidth)) / 5;
     for (int i = 0 ; i < 4 ; i++) {
         float offsetX = (i + 1) * gap;
-        obstacles.push_back(Obstacle({offsetX, float(GetScreenHeight() - 100)}));
+        obstacles.push_back(Obstacle({offsetX, float(GetScreenHeight() - 200)}));
     }
 
     return obstacles;
@@ -125,12 +128,12 @@ std::vector<Alien> Game::CreateAliens() {
 
 void Game::MoveAliens() {
     for (auto& alien : aliens) {
-        if (alien.position.x + alien.alienImages[alien.type - 1].width * 0.06f > GetScreenWidth()) {
+        if (alien.position.x + alien.alienImages[alien.type - 1].width * 0.06f > GetScreenWidth() - 10) {
             aliensDirection = -1;
             MoveDownAliens(4);
         }
 
-        if (alien.position.x < 0) {
+        if (alien.position.x < 10) {
             aliensDirection = 1;
             MoveDownAliens(4);
         }
@@ -192,6 +195,10 @@ void Game::checkForCollisions() {
     for (auto& laser : alienLasers) {
         if (CheckCollisionRecs(laser.getRect(), spaceship.getRect())) {
             laser.active = false;
+            lives--;
+            if (lives == 0) {
+                GameOver();
+            }
         }
         
         for (auto& obstacle : obstacles) {
@@ -222,7 +229,29 @@ void Game::checkForCollisions() {
         }
 
         if (CheckCollisionRecs(alien.getRect(), spaceship.getRect())) {
+            GameOver();
         }
     }
 }
 
+void Game::GameOver() {
+    run = false;
+}
+
+void Game::InitGame() {
+    run = true;
+    obstacles = CreateObstacles();
+    aliens = CreateAliens();
+    aliensDirection = 1;
+    timeLastAlienFired = 0.0;
+    timeLastSpawn = 0.0;
+    mysteryShipSpawnInterval = GetRandomValue(10, 20);
+    lives = 3;
+}
+
+void Game::Reset() {
+    spaceship.Reset();
+    aliens.clear();
+    alienLasers.clear();
+    obstacles.clear();
+}
