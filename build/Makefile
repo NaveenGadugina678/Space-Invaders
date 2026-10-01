@@ -225,6 +225,30 @@ src/laser.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/space_invaders.dir/build.make CMakeFiles/space_invaders.dir/src/laser.cpp.s
 .PHONY : src/laser.cpp.s
 
+src/levels.o: src/levels.cpp.o
+.PHONY : src/levels.o
+
+# target to build an object file
+src/levels.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/space_invaders.dir/build.make CMakeFiles/space_invaders.dir/src/levels.cpp.o
+.PHONY : src/levels.cpp.o
+
+src/levels.i: src/levels.cpp.i
+.PHONY : src/levels.i
+
+# target to preprocess a source file
+src/levels.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/space_invaders.dir/build.make CMakeFiles/space_invaders.dir/src/levels.cpp.i
+.PHONY : src/levels.cpp.i
+
+src/levels.s: src/levels.cpp.s
+.PHONY : src/levels.s
+
+# target to generate assembly for a file
+src/levels.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/space_invaders.dir/build.make CMakeFiles/space_invaders.dir/src/levels.cpp.s
+.PHONY : src/levels.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -342,6 +366,9 @@ help:
 	@echo "... src/laser.o"
 	@echo "... src/laser.i"
 	@echo "... src/laser.s"
+	@echo "... src/levels.o"
+	@echo "... src/levels.i"
+	@echo "... src/levels.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

@@ -22,7 +22,7 @@ int main() {
 
     SetTargetFPS(60);
     
-    Font font = LoadFontEx("font/dogica.ttf", 64, 0, 0);
+    Font font = LoadFontEx("fonts/VPPixel.otf", 64, 0, 0);
     Texture2D background = LoadTexture("graphics/background.jpg");
     Texture2D life = LoadTexture("graphics/life.png");
 
@@ -37,9 +37,10 @@ int main() {
         DrawRectangleRoundedLines({10, 10, 760, 740}, 0.18f, 20, yellow);
         DrawLineEx({20, 670}, {760, 670}, 3, yellow);
         if (game.run) {
-            DrawTextEx(font, "LEVEL 01", {600, 700}, 20, 1.0f, yellow);
+            std::string curr_level = "LEVEL " + std::to_string(game.level);
+            DrawTextEx(font, curr_level.c_str(), {600, 700}, 30, 1.0f, yellow);
         }else {
-            DrawTextEx(font, "GAME OVER", {600, 700}, 20, 1.0f, yellow);
+            DrawTextEx(font, "GAME OVER", {600, 700}, 30, 1.0f, yellow);
         }
         
         float x = 50.0f;
@@ -50,11 +51,11 @@ int main() {
 
         DrawTextEx(font, "SCORE", {50, 15}, 34, 2.0f, yellow);
         std::string scoreText = FormatWithLeadingZeros(game.score, 5);
-        DrawTextEx(font, scoreText.c_str(), {58, 50}, 34, 2.0f, yellow);
+        DrawTextEx(font, scoreText.c_str(), {55, 50}, 34, 2.0f, yellow);
         
-        DrawTextEx(font, "HIGH-SCORE", {520, 15}, 34, 2.0f, yellow);
+        DrawTextEx(font, "HIGH-SCORE", {590, 15}, 34, 2.0f, yellow);
         std::string highscoreText = FormatWithLeadingZeros(game.highscore, 5);
-        DrawTextEx(font, highscoreText.c_str(), {585, 50}, 34, 2.0f, yellow);
+        DrawTextEx(font, highscoreText.c_str(), {630, 50}, 34, 2.0f, yellow);
 
         game.Draw();
         EndDrawing();

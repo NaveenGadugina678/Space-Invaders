@@ -1,7 +1,7 @@
 #include "spaceship.h"
 
 Spaceship::Spaceship() {
-    image = LoadTexture("Graphics/spaceship.png");
+    image = LoadTexture("graphics/spaceship.png");
     position.x = (GetScreenWidth() - image.width * 0.1f) / 2;
     position.y = GetScreenHeight() - image.height * 0.1f - 100;
     lastFireTime = 0.0;

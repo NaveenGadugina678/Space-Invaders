@@ -5,6 +5,7 @@
 Game::Game() {
     music = LoadMusicStream("sound/music.ogg");
     explosionSound = LoadSound("sound/explosion.ogg");
+    health_loss = LoadSound("sound/health_loss.ogg");
     PlayMusicStream(music);
     InitGame();
 }
@@ -41,6 +42,16 @@ void Game::Update() {
         mysteryship.Update();
 
         checkForCollisions();
+
+
+        if (aliens.empty()) {
+            level++;
+            if (level > 1 && (level - 1) % 5 == 0) {
+                lives = 3;
+            }
+            obstacles = CreateObstacles();
+            aliens = CreateAliens();
+        }
     }else {
         if (IsKeyDown(KEY_ENTER)) {
             if (lives == 0) {
@@ -129,9 +140,11 @@ std::vector<Alien> Game::CreateAliens() {
             } else {
                 alienType = 1;
             }
-            float x = 75 + col * 55;
-            float y = 110 + row * 55;
-            aliens.push_back(Alien(alienType, {x, y}));
+            if (levels.levelGrids[level - 1][row][col] == 1) {
+                float x = 75 + col * 55;
+                float y = 110 + row * 55;
+                aliens.push_back(Alien(alienType, {x, y}));
+            }
         }
     }
     return aliens;
@@ -222,6 +235,7 @@ void Game::checkForCollisions() {
 
     for (auto& laser : alienLasers) {
         if (CheckCollisionRecs(laser.getRect(), spaceship.getRect())) {
+            PlaySound(health_loss);
             laser.active = false;
             lives--;
             if (lives == 0) {
@@ -268,6 +282,7 @@ void Game::GameOver() {
 
 void Game::InitGame() {
     run = false;
+    level = 1;
     obstacles = CreateObstacles();
     aliens = CreateAliens();
     aliensDirection = 1;
@@ -310,7 +325,7 @@ int Game::loadHighscoreFromFile() {
         highscoreFile >> loadedHighscore;
         highscoreFile.close();
     }else {
-        std::cerr << "Failed to save highscore to file" << "\n";
+        std::cerr << "Failed to load highscore from file" << "\n";
     }
     
     return loadedHighscore;
