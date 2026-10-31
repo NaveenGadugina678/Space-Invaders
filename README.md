@@ -1,12 +1,22 @@
-# 👾 Space Invaders (C++ & Raylib)
+# Space Invaders (C++ & Raylib)
 
 A recreation of the classic arcade game **Space Invaders**, implemented from scratch in **C++17** using the **[Raylib](https://www.raylib.com/)** multimedia library and **CMake**.
 
 Defend Earth from waves of descending alien invaders, take cover behind destructible shields, shoot down high-value mystery UFOs, and climb the high-score leaderboard!
 
 ---
+## Game-play
 
-## 🎮 Features
+### Sample image one
+![Sample](./graphics/sample-1.png)  
+### Sample image two  
+![Sample](./graphics/sample-2.png)  
+### Sample image three  
+![Sample](./graphics/sample-3.png)  
+
+---
+
+## Features
 
 - **Classic Arcade Gameplay**: 5 rows of 11 alien invaders marching side-to-side and descending toward Earth.
 - **Dynamic Scoring**:
@@ -21,7 +31,7 @@ Defend Earth from waves of descending alien invaders, take cover behind destruct
 
 ---
 
-## 🕹️ Controls
+## Controls
 
 | Action | Primary Key | Alternative (Vim) |
 | :--- | :--- | :--- |
@@ -32,7 +42,7 @@ Defend Earth from waves of descending alien invaders, take cover behind destruct
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```text
 Space-Invaders/
@@ -63,7 +73,7 @@ Space-Invaders/
 
 ---
 
-## 🛠️ Prerequisites & Dependencies
+## Prerequisites & Dependencies
 
 To build and run this project, make sure you have:
 
@@ -97,7 +107,7 @@ To build and run this project, make sure you have:
 
 ---
 
-## 🚀 Building & Running
+## Building & Running
 
 1. **Clone the repository** (or navigate to the project directory):
    ```bash
