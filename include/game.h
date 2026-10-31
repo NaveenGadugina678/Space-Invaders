@@ -4,6 +4,7 @@
 #include "alien.h"
 #include "mysteryship.h"
 #include "levels.h"
+#include <utility>
 
 class Game {
     public:
@@ -16,8 +17,11 @@ class Game {
         int lives;
         int score;
         int highscore;
-        Music music;
+        Music music[5];
         int level;
+        int musicOrder[5];
+        int musicIndex;
+
     private:
         void DeleteInactiveLasers();
         std::vector<Obstacle> CreateObstacles();
@@ -34,6 +38,8 @@ class Game {
         int loadHighscoreFromFile();
         void saveLevelToFile(int highscore);
         int loadLevelFromFile();
+        void loadBGM();
+        void UpdateBGM();
 
         Spaceship spaceship;
         std::vector<Obstacle> obstacles;

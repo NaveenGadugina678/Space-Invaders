@@ -3,26 +3,32 @@
 #include <iostream>
 
 Game::Game() {
-    music = LoadMusicStream("sound/music.ogg");
+    loadBGM();
     explosionSound = LoadSound("sound/explosion.ogg");
     health_loss = LoadSound("sound/health_loss.ogg");
-    PlayMusicStream(music);
     InitGame();
 }
 
 Game::~Game() {
     Alien::UnloadImages();
-    UnloadMusicStream(music);
+
+    for (int i = 0 ; i < 5 ; i++) {
+        UnloadMusicStream(music[i]);
+    }
+
     UnloadSound(explosionSound);
 }
 
 void Game::Update() {
+   
+    UpdateBGM();
+
     if (run) {
         double currentTime = GetTime();
         if (currentTime - timeLastSpawn > mysteryShipSpawnInterval) {
             mysteryship.Spawn();
             timeLastSpawn = GetTime();
-            mysteryShipSpawnInterval = GetRandomValue(10, 20);
+            mysteryShipSpawnInterval = GetRandomValue(10, 35);
         }
 
         for (auto& laser : spaceship.lasers) {
@@ -45,11 +51,14 @@ void Game::Update() {
 
 
         if (aliens.empty()) {
-            level++;
+            level = level > 20 ? run = false : level + 1;
             if (level > 1 && (level - 1) % 5 == 0) {
-                lives = 3;
+                lives = lives < 3? lives + 1 : lives;
             }
-            obstacles = CreateObstacles();
+            if (level % 3 == 0) {
+                obstacles.clear();
+                obstacles = CreateObstacles();
+            }
             aliens = CreateAliens();
         }
     }else {
@@ -329,4 +338,51 @@ int Game::loadHighscoreFromFile() {
     }
     
     return loadedHighscore;
+}
+
+void Game::loadBGM() {
+    music[0] = LoadMusicStream("sound/music1.ogg");
+    music[1] = LoadMusicStream("sound/music2.ogg");
+    music[2] = LoadMusicStream("sound/music3.ogg");
+    music[3] = LoadMusicStream("sound/music4.ogg");
+    music[4] = LoadMusicStream("sound/music5.ogg");
+
+    for (int i = 0; i < 5; i++) {
+        music[i].looping = false;
+        musicOrder[i] = i;
+    }
+
+    for (int i = 4; i > 0; i--) {
+        int j = GetRandomValue(0, i);
+        std::swap(musicOrder[i], musicOrder[j]);
+    }
+
+    musicIndex = 0;
+
+    PlayMusicStream(music[musicOrder[musicIndex]]);
+}
+
+void Game::UpdateBGM() {
+
+    Music& current = music[musicOrder[musicIndex]];
+    UpdateMusicStream(current);
+
+    float length = GetMusicTimeLength(current);
+    float played = GetMusicTimePlayed(current);
+
+    if (played >= length - 0.1f) {
+        StopMusicStream(current);
+        musicIndex++;
+
+        if (musicIndex >= 5) {
+            for (int i = 4; i > 0; i--) {
+                int j = GetRandomValue(0, i);
+                std::swap(musicOrder[i], musicOrder[j]);
+            }
+
+            musicIndex = 0;
+        }
+
+        PlayMusicStream(music[musicOrder[musicIndex]]);
+    }
 }

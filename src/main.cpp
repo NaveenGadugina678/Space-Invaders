@@ -23,13 +23,12 @@ int main() {
     SetTargetFPS(60);
     
     Font font = LoadFontEx("fonts/VPPixel.otf", 64, 0, 0);
-    Texture2D background = LoadTexture("graphics/background.jpg");
+    Texture2D background = LoadTexture("graphics/background.png");
     Texture2D life = LoadTexture("graphics/life.png");
 
     Game game;
 
     while(WindowShouldClose() == false) {
-        UpdateMusicStream(game.music);
         game.HandleInput();
         game.Update();
         BeginDrawing();
@@ -39,6 +38,8 @@ int main() {
         if (game.run) {
             std::string curr_level = "LEVEL " + std::to_string(game.level);
             DrawTextEx(font, curr_level.c_str(), {600, 700}, 30, 1.0f, yellow);
+        }else if (game.level == 20) {
+            DrawTextEx(font, "MISSION CLEAR!", {600, 700}, 30, 1.0f, yellow);
         }else {
             DrawTextEx(font, "GAME OVER", {600, 700}, 30, 1.0f, yellow);
         }
